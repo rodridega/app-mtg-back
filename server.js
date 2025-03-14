@@ -8,13 +8,13 @@ const server = http.createServer(app);
 
 // Configura CORS para permitir solicitudes desde http://localhost:5173
 app.use(cors({
-  origin: "http://localhost:5173", // Origen permitido
+  origin: "https://app-mtg-front.onrender.com", // Origen permitido
   methods: ["GET", "POST"], // Métodos HTTP permitidos
 }));
 
 const io = new Server(server, {
   cors: {
-    origin: "http://localhost:5173", // Permite conexiones Socket.IO desde este origen
+    origin: "https://app-mtg-front.onrender.com", // Permite conexiones Socket.IO desde este origen
     methods: ["GET", "POST"], // Métodos HTTP permitidos
   },
 });
